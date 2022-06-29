@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid rgb(5, 61, 1);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#02383e, #dae9ef);
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 115px;
+    left: 100;
+    animation: pipe-animation 2.7s infinite linear;
+
+}
+
+.wario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    
+}
+
+.jump {
+    animation: jump 600ms ease-out;
+}
+
+.powerup {
+    position: absolute;
+    width: 80px;
+    animation: powerup-animation 15s infinite linear;
+}
+
+.nuvem {
+    position: absolute;
+    width: 280px;
+    animation: nuvem-animation 20s infinite linear;
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -90px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+    40% {
+        bottom: 190px;
+    }
+    50%{
+        bottom: 190px;
+    }
+    60% {
+        bottom: 190px;
+    }
+    100% {
+        bottom: 0;
+    }
+    
+}
+
+@keyframes powerup-animation {
+    from {
+        right: -90px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes nuvem-animation {
+    from {
+        right: 100%;
+    }
+    to {
+        right: -90px;
+    }
+}
